@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.11)  12 DEC 2022 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.11)  12 DEC 2022 22:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1092,7 +1092,11 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Warning: Unused global option(s):
     [ctexart].
 
-No file tesi.aux.
+(./tesi.aux
+
+LaTeX Warning: Label `subsec:brief_history' multiply defined.
+
+)
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
@@ -1182,7 +1186,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
-(c:/texlive/2022/texmf-dist/tex/latex/caption/ltcaption.sty
+ (c:/texlive/2022/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
@@ -1293,30 +1297,39 @@ File: ctex-zhmap-windows.tex 2022/07/14 v2.5.10 Windows font map loader for pdfT
 
 ] [4
 
-]
-No file tesi.toc.
+] (./tesi.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [5
+
+])
 \tf@toc=\write7
 \openout7 = `tesi.toc'.
 
-[5
-
-]
-No file tesi.lof.
+ [6] (./tesi.lof)
 \tf@lof=\write8
 \openout8 = `tesi.lof'.
 
-No file tesi.lot.
+ (./tesi.lot)
 \tf@lot=\write9
 \openout9 = `tesi.lot'.
 
-[6
+ [7
+
+] [8
 
 ]) (./sections/1_0_introduction.tex
 Chapter 1.
 (./sections/1_1_introduction.tex) (./sections/1_2_thesis_organization.tex
-
-LaTeX Warning: Hyper reference `ch:introduction' on page 1 undefined on input line 3.
-
 
 LaTeX Warning: Hyper reference `ch:theoretical-foundations' on page 1 undefined on input line 5.
 
@@ -1332,39 +1345,109 @@ LaTeX Warning: Hyper reference `ch:implementations' on page 1 undefined on input
 
 LaTeX Warning: Hyper reference `ch:final-discussions' on page 1 undefined on input line 13.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
-(c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)) (./sections/2_0_background_notions.tex [1
+
+
+
+] [2
+
+]
+Chapter 2.
+(./sections/2_1_the_prolog_language.tex) (./sections/2_2_constraint_programming.tex)) (./sections/3_0_clp_2p_kt.tex [3] [4
+
+]
+Chapter 3.
+(./sections/3_1_requirements.tex) (./sections/3_2_design.tex) (./sections/3_3_implementation.tex) (./sections/3_4_case_study.tex)) (./sections/4_0_labeled_prolog.tex [5] [6
+
+]
+Chapter 4.
+(./sections/4_1_requirements.tex) (./sections/4_2_model.tex) (./sections/4_3_implementation.tex)) (./sections/5_0_clp_labeled_prolog.tex [7] [8
+
+]
+Chapter 5.
+(./sections/5_1_clp_labeled_prolog.tex)) (./sections/6_0_conclusions.tex [9] [10
+
+]
+Chapter 6.
+(./sections/6_1_conclusions.tex)) [11] [12
+
+] (./pages/ringraziamenti.tex
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
- (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)))
+No file tesi.gls.
+No file tesi.acr.
+(./pages/bibliografia.tex [13
 
-! LaTeX Error: File `./sections/2_0_theoretical_foundations.tex' not found.
+] [14
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
+]
 
-Enter file name: 
-c:/Users/boezi/VisualStudioProjects/master-thesis/tesi.tex:110: Emergency stop.
-<read *> 
-         
-l.110 ...sections/2_0_theoretical_foundations.tex}
-                                                  ^^M
-*** (cannot \read from terminal in nonstop modes)
+Package biblatex Warning: Type 'book' not found on input line 14.
 
- 
+
+LaTeX Warning: Empty bibliography on input line 14.
+
+
+Package biblatex Warning: Type 'online' not found on input line 17.
+
+
+LaTeX Warning: Empty bibliography on input line 17.
+
+
+Package biblatex Warning: Type 'article' not found on input line 18.
+
+
+LaTeX Warning: Empty bibliography on input line 18.
+
+) [15
+
+] 
+AED: lastpage setting LastPage
+(./tesi.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                tesi
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'tesi.run.xml'.
+\openout1 = `tesi.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 36614 strings out of 474968
- 660638 string characters out of 5780080
- 1530494 words of memory out of 5000000
- 57344 multiletter control sequences out of 15000+600000
- 492296 words of font info for 115 fonts, out of 8000000 for 9000
+ 36867 strings out of 474968
+ 665302 string characters out of 5780080
+ 1537897 words of memory out of 5000000
+ 57469 multiletter control sequences out of 15000+600000
+ 494377 words of font info for 123 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 91i,5n,125p,2351b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
-c:/Users/boezi/VisualStudioProjects/master-thesis/tesi.tex:110:  ==> Fatal error occurred, no output PDF file produced!
+ 91i,5n,125p,2351b,2351s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{glo:word} has been referenced but does not exist, replaced by a fixed one
+
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on tesi.pdf (23 pages, 187970 bytes).
+PDF statistics:
+ 344 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 47353 words of extra memory for PDF output out of 51595 (max. 10000000)
+
