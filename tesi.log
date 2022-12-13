@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.11)  12 DEC 2022 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.11)  13 DEC 2022 21:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1094,7 +1094,7 @@ LaTeX Warning: Unused global option(s):
 
 (./tesi.aux
 
-LaTeX Warning: Label `subsec:brief_history' multiply defined.
+LaTeX Warning: Label `subsubsec:rules' multiply defined.
 
 )
 \openout1 = `tesi.aux'.
@@ -1353,23 +1353,134 @@ LaTeX Warning: Hyper reference `ch:final-discussions' on page 1 undefined on inp
 
 ]
 Chapter 2.
-(./sections/2_1_the_prolog_language.tex) (./sections/2_2_constraint_programming.tex)) (./sections/3_0_clp_2p_kt.tex [3] [4
+(./sections/2_1_the_prolog_language.tex
 
-]
+LaTeX Warning: Citation '10.1145/155360.155362' on page 3 undefined on input line 6.
+
+
+LaTeX Warning: Citation 'coelho1986automated' on page 3 undefined on input line 13.
+
+
+LaTeX Warning: Citation 'merritt2012building' on page 3 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'gelfond2002logic' on page 3 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'pinna2015resolving' on page 3 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'lally2011natural' on page 3 undefined on input line 17.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--31
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 52--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
+
+ []
+
+
+LaTeX Warning: Citation 'Clocksin1987ProgrammingIP' on page 5 undefined on input line 74.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--75
+
+ []
+
+
+Overfull \hbox (113.7061pt too wide) in paragraph at lines 67--75
+\T1/cmr/m/n/10.95 (-20) The afore-men-tioned de-scrip-tion of Pro-log lan-guage has been adapted from [[]]. 
+ []
+
+[5]
+
+LaTeX Warning: Citation 'Gallier1985LogicFC' on page 6 undefined on input line 88.
+
+[6]
+<images/2p_kt.jpg, id=153, 551.81157pt x 272.51813pt>
+File: images/2p_kt.jpg Graphic file (type jpg)
+<use images/2p_kt.jpg>
+Package pdftex.def Info: images/2p_kt.jpg  used on input line 95.
+(pdftex.def)             Requested size: 277.19879pt x 136.90326pt.
+
+
+LaTeX Warning: Citation 'CIATTO2021100817' on page 7 undefined on input line 99.
+
+LaTeX Font Info:    Trying to load font information for C70+rm on input line 105.
+(c:/texlive/2022/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+File: c70rm.fd 2022/07/14 v2.5.10 Chinese font definition (CTEX)
+)
+Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (quanjiao) on input line 105.
+ [7 <./images/2p_kt.jpg>]) (./sections/2_2_constraint_programming.tex)) (./sections/3_0_clp_2p_kt.tex [8]
 Chapter 3.
-(./sections/3_1_requirements.tex) (./sections/3_2_design.tex) (./sections/3_3_implementation.tex) (./sections/3_4_case_study.tex)) (./sections/4_0_labeled_prolog.tex [5] [6
+(./sections/3_1_requirements.tex) (./sections/3_2_design.tex) (./sections/3_3_implementation.tex) (./sections/3_4_case_study.tex)) (./sections/4_0_labeled_prolog.tex [9
+
+] [10
 
 ]
 Chapter 4.
-(./sections/4_1_requirements.tex) (./sections/4_2_model.tex) (./sections/4_3_implementation.tex)) (./sections/5_0_clp_labeled_prolog.tex [7] [8
+(./sections/4_1_requirements.tex) (./sections/4_2_model.tex) (./sections/4_3_implementation.tex)) (./sections/5_0_clp_labeled_prolog.tex [11] [12
 
 ]
 Chapter 5.
-(./sections/5_1_clp_labeled_prolog.tex)) (./sections/6_0_conclusions.tex [9] [10
+(./sections/5_1_clp_labeled_prolog.tex)) (./sections/6_0_conclusions.tex [13] [14
 
 ]
 Chapter 6.
-(./sections/6_1_conclusions.tex)) [11] [12
+(./sections/6_1_conclusions.tex)) [15] [16
 
 ] (./pages/ringraziamenti.tex
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
@@ -1389,9 +1500,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 )
 No file tesi.gls.
 No file tesi.acr.
-(./pages/bibliografia.tex [13
+(./pages/bibliografia.tex [17
 
-] [14
+] [18
 
 ]
 
@@ -1412,7 +1523,7 @@ Package biblatex Warning: Type 'article' not found on input line 18.
 
 LaTeX Warning: Empty bibliography on input line 18.
 
-) [15
+) [19
 
 ] 
 AED: lastpage setting LastPage
@@ -1433,21 +1544,21 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36867 strings out of 474968
- 665302 string characters out of 5780080
- 1537897 words of memory out of 5000000
- 57469 multiletter control sequences out of 15000+600000
- 494377 words of font info for 123 fonts, out of 8000000 for 9000
+ 37380 strings out of 474968
+ 675754 string characters out of 5780080
+ 1538815 words of memory out of 5000000
+ 57892 multiletter control sequences out of 15000+600000
+ 498515 words of font info for 160 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 91i,5n,125p,2351b,2351s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,8n,125p,2351b,2351s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:word} has been referenced but does not exist, replaced by a fixed one
 
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on tesi.pdf (23 pages, 187970 bytes).
+<c:/Windows/Fonts/simsun.ttc>{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on tesi.pdf (27 pages, 308341 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 47353 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 51458 words of extra memory for PDF output out of 51595 (max. 10000000)
 

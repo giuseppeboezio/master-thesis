@@ -2352,7 +2352,16 @@
     <bcf:datasource type="file" datatype="bibtex">bibliografia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">10.1145/155360.155362</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">coelho1986automated</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">merritt2012building</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">gelfond2002logic</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">pinna2015resolving</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">lally2011natural</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Clocksin1987ProgrammingIP</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Gallier1985LogicFC</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">CIATTO2021100817</bcf:citekey>
+    <bcf:citekey order="10" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
