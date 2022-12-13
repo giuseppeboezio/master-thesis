@@ -2361,7 +2361,10 @@
     <bcf:citekey order="7" intorder="1">Clocksin1987ProgrammingIP</bcf:citekey>
     <bcf:citekey order="8" intorder="1">Gallier1985LogicFC</bcf:citekey>
     <bcf:citekey order="9" intorder="1">CIATTO2021100817</bcf:citekey>
-    <bcf:citekey order="10" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">10.5555/2843512</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">JAFFAR1994503</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">SWI-Prolog</bcf:citekey>
+    <bcf:citekey order="13" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

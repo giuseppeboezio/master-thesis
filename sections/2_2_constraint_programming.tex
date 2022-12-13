@@ -1,7 +1,58 @@
 \section{Constraint Programming}\label{sec:constraint_programming}
 
+Constraint Programming is a paradigm for solvig combinatorial problems where
+different constraints are imposed on feasible solutions for different decision variables, each having
+its own domain. Constraints are relations among variables which limit the values decision variables
+can assume in feasible solutions \cite{10.5555/2843512}
+
 \subsection{Brief History}\label{subsec:brief_history}
+In artificial intelligence interest in constraint satisfaction developed in two streams. In
+some sense a common ancestor of both streams is Ivan Sutherland’s groundbreaking 1963
+MIT Ph.D. thesis, “Sketchpad: A man-machine graphical communication system”.
+In one stream, the versatility of constraints led to applications in a variety of domains,
+and associated programming languages and systems. This stream we can call the language
+stream. In 1964 Wilkes proposed that algebraic equations be allowed as constraint statements
+in procedural Algol-like programming languages, with relaxation used to satisfy the
+constraints. Around 1967, Elcock developed a declarative language, Absys, based on
+the manipulation of equational constraints.
+
+\subsection{Concepts}\label{subsec:concepts_cp}
+
+There are mainly two types of constraint programming problems: CSP (Constraint Satisfaction Problem) and COP (Constraint Optimization Problem).\newline\newline
+A \textit{constraint satisfaction problem} (CSP) involves finding solutions to a constraint network,
+that is, assignments of values to its variables that satisfy all its constraints. Constraints
+specify combinations of values that given subsets of variables are allowed to take.\newline
+A constraint can be specified extensionally by the list of its satisfying tuples, or intensionally
+by a formula that is the characteristic function of the constraint.\newline\newline
+A \textit{constraint optimization problem} (COP) basically the same as a CSP but in addition to the aforementioned constraints there is another one
+which consists of finding a solution which minimizes or maximizes a certain function.
+
 
 \subsection{Constraint Logic Programming}\label{subsec:clp}
 
+\textit{Constraint Logic Programming} (CLP) began as a natural merger of two declarative para-
+digms: constraint solving and logic programming \cite{JAFFAR1994503}.\newline
+Viewing the subject rather broadly, constraint logic programming can be said to involve the
+incorporation of constraints and constraint “solving” methods in a logic-based language.
+This characterization suggests the possibility of many interesting languages, based on dif-
+ferent constraints and different logics. However, to this point, work on CLP has almost
+exclusively been devoted to languages based on Horn clauses.\newline
+Prolog can be said to be a CLP language where the constraints are equations over the
+algebra of terms (also called the algebra of finite trees, or the Herbrand domain). The equa-
+tions are implicit in the use of unification.
+
 \subsection{SWI Prolog - CLP libraries}\label{subsec:clp_swi}
+
+SWI-Prolog is an implementation of the Prolog language which is strong in education because it is free and portable, but also because of its compatibility with textbooks and its easy-to-use environment.\newline
+SWI-Prolog is used as an embedded language where it serves as a small rule subsystem in a large application. The syntax and set of built-in predicates is based on the ISO standard \cite{SWI-Prolog}.
+
+\subsubsection{CLP(X) libraries}\label{subsubsec:clp_libraries}
+CLP(X) stands for constraint logic programming over the domain X. Plain Prolog can be regarded as CLP(H), where H stands for Herbrand terms.\newline
+SWI Prolog supports:\newline
+\begin{itemize}
+    \item \textbf{CLP(FD)} for integers
+    \item \textbf{CLP(B)} for boolean variables
+    \item \textbf{CLP(Q)} for rational numbers
+    \item \textbf{CLP(R)} for floating point numbers
+\end{itemize}
+
