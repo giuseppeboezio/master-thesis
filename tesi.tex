@@ -74,6 +74,12 @@
 \usepackage{longtable}                  % tabelle su più pagine                                        
 \usepackage{ltxtable}                   % tabelle su più pagine e adattabili in larghezza
 
+\usepackage{multicol}                   % colonne multiple
+\usepackage{tabularx}
+
+\usepackage{amsmath,bm}
+\usepackage{version}
+
 \usepackage[toc, acronym]{glossaries}   % glossario
 % per includerlo nel documento bisogna:
 % 1. compilare una prima volta tesi.tex;
@@ -116,7 +122,9 @@
     % Materiale finale
     %**************************************************************
     \backmatter
-    \input{pages/ringraziamenti}
+    \newpage
+    ~\newpage
     \printglossaries
-    \input{./pages/bibliografia}
+    \input{pages/ringraziamenti.tex}
+    \input{pages/bibliografia}
 \end{document}
