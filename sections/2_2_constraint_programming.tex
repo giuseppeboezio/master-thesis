@@ -24,22 +24,19 @@ that is, assignments of values to its variables that satisfy all its constraints
 specify combinations of values that given subsets of variables are allowed to take.\newline
 A constraint can be specified extensionally by the list of its satisfying tuples, or intensionally
 by a formula that is the characteristic function of the constraint.\newline\newline
-A \textit{constraint optimization problem} (COP) basically the same as a CSP but in addition to the aforementioned constraints there is another one
+A \textit{constraint optimization problem} (COP) is basically the same as a CSP but in addition to the aforementioned constraints there is another one
 which consists of finding a solution which minimizes or maximizes a certain function.
 
 
 \subsection{Constraint Logic Programming}\label{subsec:clp}
 
-\textit{Constraint Logic Programming} (CLP) began as a natural merger of two declarative para-
-digms: constraint solving and logic programming \cite{JAFFAR1994503}.\newline
+\textit{Constraint Logic Programming} (CLP) began as a natural merger of two declarative paradigms: constraint solving and logic programming \cite{JAFFAR1994503}.\newline
 Viewing the subject rather broadly, constraint logic programming can be said to involve the
 incorporation of constraints and constraint “solving” methods in a logic-based language.
-This characterization suggests the possibility of many interesting languages, based on dif-
-ferent constraints and different logics. However, to this point, work on CLP has almost
+This characterization suggests the possibility of many interesting languages, based on different constraints and different logics. However, to this point, work on CLP has almost
 exclusively been devoted to languages based on Horn clauses.\newline
 Prolog can be said to be a CLP language where the constraints are equations over the
-algebra of terms (also called the algebra of finite trees, or the Herbrand domain). The equa-
-tions are implicit in the use of unification.
+algebra of terms (also called the algebra of finite trees, or the Herbrand domain). The equations are implicit in the use of unification.
 
 \subsection{SWI Prolog - CLP libraries}\label{subsec:clp_swi}
 
@@ -56,3 +53,25 @@ SWI Prolog supports:\newline
     \item \textbf{CLP(R)} for floating point numbers
 \end{itemize}
 
+All constraints contained in these libraries will be deeply explained
+in chapter \ref{ch:clp_2p_kt}.\newline\newline
+\textbf{CLP(FD)} has two main usages:
+\begin{itemize}
+    \item declarative integer arithmetics
+    \item solving combinatorial problems such as planning, scheduling and allocation tasks
+\end{itemize}
+The predicate of this library can be classified as:
+\begin{itemize}
+    \item \textit{arithmetic constraints}
+    \item \textit{membership constraints}
+    \item \textit{enumeration predicates}
+    \item \textit{combinatorial constraints}
+    \item \textit{reification predicates}
+    \item \textit{reflection predicates}
+\end{itemize}
+
+Practical usage of these constraints can be found in \cite{Triska12}.\newline\newline
+\textbf{CLP(Q) and CLP(R)} share basically the same constraints except for \textit{bb\_inf}
+constraint which is used to find a minimum in the case of mixed integer programming.\newline\newline
+\textbf{CLP(B)} can be used to model and solve combinatorial problems such as verification, allocation and covering tasks.
+Benchmarks and usage examples of this library are available from \cite{Triska2016} and \cite{Triska2018}.

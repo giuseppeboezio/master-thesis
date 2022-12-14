@@ -30,11 +30,11 @@ Prolog is used to solve problems which involve objects and relations among them.
 The main features of the programming language are:
 \begin{itemize}
     \item specifyng some \textit{facts} about some objects and their relationships
-    \item defining some \textit{rules} about object and their relationships
+    \item defining some \textit{rules} about objects and their relationships
     \item asking \textit{questions} about objects and their relationships
 \end{itemize}
 
-Prolog programs are built from terms. A term is either a constant, a variable or a structure.\newline
+Prolog programs are built from terms. A term is either a constant, a variable or a structure.
 \subsubsection{Constants}\label{subsubsec:constants}
 A constant is a sequence of characters which denotes a specific object or relationship. A constant can be an atom or a number.
 All constants begin with a lower case letter.\newline\newline
@@ -74,7 +74,7 @@ motherOf(X,Y) :- parentOf(X,Y),female(X).\newline\newline
 The aforementioned description of Prolog language has been adapted from \cite{Clocksin1987ProgrammingIP}.
 
 \subsubsection{Unification}\label{subsubsec:Unification}
-A substitution is a function which associates a variable to a given term. The most general unifier (m.g.u.) is the substitution which allows to transform two predicates making them equals
+A substitution is a function which associates a variable to a given term. The most general unifier (m.g.u.) is the substitution which allows to transform two terms making them equals
 such that all other substitutions can be obtained through a composition with this one.
 The unification is a process whereby two structures are made equals via substitution and it is used several times during the Prolog resolution process. 
 
