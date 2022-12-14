@@ -1,1 +1,126 @@
 \section{Design}\label{sec:design}
+
+\subsection{Common aspects}\label{subsec:common_aspects}
+Four different libraries have been realized:
+\begin{itemize}
+    \item \textbf{clp-core} for basic functionality of the other libraries
+    \item \textbf{clpfd} for integer variables
+    \item \textbf{clpqr} for rational and real variables
+    \item \textbf{clpb} for boolean variables
+\end{itemize}
+\textbf{clpqr} contains basically the predicates of \textbf{clpq} and \textbf{clpr} because there
+is any distinction between rational and reals in 2P-Kt.\newline
+
+Libraries will be described in the following sections highlighting common and/or different aspects with respect to the SWI Prolog counterpart.
+
+\subsection{Constraint Logic Programming over Finite Domains}\label{subsec:clpfd}
+For a better explaination predicates will be divided in groups as described in section \ref{subsubsec:clp_libraries}.
+
+\subsubsection{Arithmetic Constraints}\label{subsubsec:arithmetic_constraints}
+
+All constraints supported by SWI Prolog are supported; constraints are the followings:\newpage
+\begin{center}
+    \begin{table}
+        \begin{tabular}{||c c ||} 
+        \hline
+        Constraint & Explaination \\ [0.5ex] 
+        \hline\hline
+        Expr1 \#= Expr2	& Expr1 equals Expr2 \\ 
+        \hline
+        Expr1 \#\= Expr2 & Expr1 is not equal to Expr2 \\
+        \hline
+        Expr1 \#>= Expr2 & Expr1 is greater than or equal to Expr2\\
+        \hline
+        Expr1 \#=< Expr2 & Expr1 is less than or equal to Expr2 \\
+        \hline
+        Expr1 \#> Expr2	& Expr1 is greater than Expr2 \\
+        \hline
+        Expr1 \#< Expr2	& Expr1 is less than Expr2 \\
+        \hline
+        \end{tabular}
+        \label{table:arithmetic_constraints}
+        \caption{Arithmetic constraints in clpfd}
+    \end{table}    
+\end{center}
+
+\begin{center}
+    \begin{table}
+        \begin{tabular}{||c c ||} 
+        \hline
+        Expression & Explaination \\ [0.5ex] 
+        \hline\hline
+        integer	& Given value \\ 
+        \hline
+        variable & Unknown integer \\
+        \hline
+        -Expr & Unary minus\\
+        \hline
+        Expr + Expr	 & Addition \\
+        \hline
+        Expr * Expr	& Multiplication \\
+        \hline
+        Expr - Expr	& Subtraction \\
+        \hline
+        Expr \^ Expr& Exponentiation \\
+        \hline
+        min(Expr,Expr) & Minimum of two expressions \\
+        \hline
+        max(Expr,Expr) & Maximum of two expressions \\
+        \hline
+        Expr mod Expr & Modulo induced by floored division \\
+        \hline
+        abs(Expr) & Absolute value \\
+        \hline
+        Expr div Expr & Floored integer division \\
+        \hline
+        \end{tabular}
+        \label{table:expressions_clp}
+        \caption{Arithmetic expressions in clpfd}
+    \end{table}    
+\end{center}
+
+\textit{Expr1} and \textit{Expr2} are \textbf{arithmetic expressions}.
+\textit{Expr rem Expr} and \textit{Expr // Expr} are not supported. \textit{rem} is modulo induced by truncated division
+whereas \textit{//} is truncated integer division.
+
+\subsubsection{Membership Constraints}\label{subsubsec:Membership}
+
+These constraints are used to specify the admissible domains of variables.\newline
+The predicates are:\newline
+\begin{itemize}
+    \item \textbf{Var in Domain}: Var is an element of Domain; Domain is either an integer or an interval (expressed as Lower..Upper)
+    \item \textbf{Vars in Domain}: The variables in the list Vars are elements of Domain
+\end{itemize}
+
+It is not current supported \textit{\/} (union of domains) as expression for building a domain.
+
+\subsubsection{Enumeration predicates}\label{subsubsec:enumeration}
+
+These predicates are used to customize the search to find a feasible assignments of all variables such that all constraints are satisfied.\newline
+The predicates are \textbf{labeling/2 and label/1}.\newline\newline
+\textbf{labeling(Options,Vars)}\newline\newline
+Assign a value to each variable in Vars; Options is a list of options that let exhibit some control over the search process. Several categories of options exist:\newline
+\begin{itemize}
+    \item \textbf{variable selection strategy}: it can the order in which the variable occurs (\textit{leftmost}, it is the default), the leftmost variable with smallest domain (\textit{ff}), the variables with smallest domains, the leftmost one participating in most constraints (\textit{ffc}), the leftmost variable whose lower bound is the lowest (\textit{min}) or the leftmost variable whose upper bound is the highest (\textit{max})
+    \item \textbf{value order}: elements of the chosen variable's domain in ascending order (\textit{up}, it is the default) or domain elements in descending order (\textit{down})
+    \item \textbf{branching strategy}: For each variable X, a choice is made between X = V and X \#\= V, where V is determined by the value ordering options. This option is called \textit{step}, it is the default and the only branching option supported
+\end{itemize}
+
+At most one option of each category can be specified, and an option must not occur repeatedly.\newline
+The order of solutions can be influenced with:\newline
+\begin{itemize}
+    \item min(Expr)
+    \item max(Expr)
+\end{itemize}
+
+This generates solutions in ascending/descending order with respect to the evaluation of the arithmetic expression Expr. Labeling Vars must make Expr ground. If several such options are specified, they are interpreted from left to right.\newline
+This predicate does not support as options the following branching strategies:\newline
+\begin{itemize}
+    \item \textit{enum}: For each variable X, a choice is made between X = V\_1, X = V\_2 etc., for all values V\_i of the domain of X. The order is determined by the value ordering options.
+    \item \textit{bisect}: For each variable X, a choice is made between X \#=< M and X \#> M, where M is the midpoint of the domain of X.
+\end{itemize}
+\textbf{label(Vars)}\newline\newline
+Equivalent to labeling([], Vars).
+
+\subsubsection{Global constraints}\label{subsubsec:global_constraints}
+
