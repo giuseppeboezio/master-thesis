@@ -1,1 +1,39 @@
 \section{Implementation}\label{sec:Implementation}
+
+The aforementioned libraries have been implemented in 2P-Kt using the following interfaces and classes:
+\begin{itemize}
+    \item \textbf{PrimitiveWrapper}: it is an abstract class which allows to define a predicate which is not unified as usual but it executes some code producing some
+    side effect on the actual substitution. This class reifies the generator concept described in \cite{10.1007/978-3-030-75775-5_27}
+    where the solver can be seen as a stream consumer allowing it to get a stream of solutions interacting with a primitive mechanism (the generator)
+    which can be seen by the solver as an ordinary build-in predicate denoted by its own \textit{signature} and \textit{arity}. The PrimitiveWrapper has been used to define most of predicates contained in the libraries.
+    \item \textbf{RuleWrapper}: it is an abstract class which allows to define a Prolog \textit{Rule}. This class is useful to avoid
+    repeated code because it allows to define some predicates in terms of other existing ones.
+    \item \textbf{Library}: it is an interface which has been implemented to group together different predicates implementations which
+    can be either \textit{PrimitiveWrapper} or \textit{RuleWrapper}
+    \item \textbf{durable CustomData}: it is a map from String to Any which allows to store data during the resolution process. It has been used to store the
+    model containing all variables and constraints of the problem
+    \item \textbf{DefaultTermVisitor}: this abstract class is used to realize the visitor pattern \cite{gamma1994design} and it has been
+    extensively used for different tasks such as evaluation of expressions, generation of arithmetic expressions and all other tasks related to perform different operation wrt the type of the term
+\end{itemize}
+
+
+The actual implementation of all constraints have been realized exploiting on the Choco Library \cite{Prud'homme2022}. This library has been chosen for different reasons:
+\begin{itemize}
+    \item it is written in Java and can be easily used with Kotlin language
+    \item wrt other similar libraries (e.g. OR Tools \cite{ortools} or JaCoP \cite{Kuchcinski2013JaCoPJ}) it simplifies the composition of expressions for the creation of new variables or constraints
+    \item well documented and with an active community to get support in case of doubts or problems
+\end{itemize}
+
+Choco Library cannot be directly mapped with SWI Prolog CLP(X) libraries
+because these these libraries belong to a different paradigms. For this reason the mapping was not immediate but
+sometimes different approaches have been used to solve these issues.\newline\newline
+Following the main mapping choices divided by Library
+
+\subsection{Constraint Logic Programming over Finite Domains}\label{map_clpfd}
+
+
+
+
+
+
+

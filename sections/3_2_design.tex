@@ -188,6 +188,7 @@ This library is very different from the previous one because variable definition
 All constraints are supported except for \textit{<Expression> =\= <Expression>} (not equal).
 This libraries contain also the following predicates:
 \begin{itemize}
+    \item \textbf{satisfy(Vars)}: Provides for each variable in Vars a feasible assignment
     \item \textbf{entailed(Constraint)}: Succeeds if Constraint is necessarily true within the current constraint store. This means that adding the negation of the constraint to the store results in failure
     \item \textbf{inf(Expression, Inf)}: Computes the infimum of Expression within the current state of the constraint store and returns that infimum in Inf. This predicate does not change the constraint store
     \item \textbf{sup(Expression, Sup)}: Computes the supremum of Expression within the current state of the constraint store and returns that supremum in Sup. This predicate does not change the constraint store
