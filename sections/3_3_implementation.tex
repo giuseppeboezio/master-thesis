@@ -3,7 +3,7 @@
 The aforementioned libraries have been implemented in 2P-Kt using the following interfaces and classes:
 \begin{itemize}
     \item \textbf{PrimitiveWrapper}: it is an abstract class which allows to define a predicate which is not unified as usual but it executes some code producing some
-    side effect on the actual substitution. This class reifies the generator concept described in \cite{10.1007/978-3-030-75775-5_27}
+    side effects on the actual substitution. This class reifies the generator concept described in \cite{10.1007/978-3-030-75775-5_27}
     where the solver can be seen as a stream consumer allowing it to get a stream of solutions interacting with a primitive mechanism (the generator)
     which can be seen by the solver as an ordinary build-in predicate denoted by its own \textit{signature} and \textit{arity}. The PrimitiveWrapper has been used to define most of predicates contained in the libraries.
     \item \textbf{RuleWrapper}: it is an abstract class which allows to define a Prolog \textit{Rule}. This class is useful to avoid
@@ -13,11 +13,11 @@ The aforementioned libraries have been implemented in 2P-Kt using the following 
     \item \textbf{durable CustomData}: it is a map from String to Any which allows to store data during the resolution process. It has been used to store the
     model containing all variables and constraints of the problem
     \item \textbf{DefaultTermVisitor}: this abstract class is used to realize the visitor pattern \cite{gamma1994design} and it has been
-    extensively used for different tasks such as evaluation of expressions, generation of arithmetic expressions and all other tasks related to perform different operation wrt the type of the term
+    extensively used for different tasks such as evaluation of expressions, generation of arithmetic expressions and all other tasks related to perform different operations wrt the type of the term
 \end{itemize}
 
 
-The actual implementation of all constraints have been realized exploiting on the Choco Library \cite{Prud'homme2022}. This library has been chosen for different reasons:
+The actual implementation of all constraints have been realized exploiting on the Choco Library \cite{Prudhomme2022}. This library has been chosen for different reasons:
 \begin{itemize}
     \item it is written in Java and can be easily used with Kotlin language
     \item wrt other similar libraries (e.g. OR Tools \cite{ortools} or JaCoP \cite{Kuchcinski2013JaCoPJ}) it simplifies the composition of expressions for the creation of new variables or constraints
@@ -25,12 +25,80 @@ The actual implementation of all constraints have been realized exploiting on th
 \end{itemize}
 
 Choco Library cannot be directly mapped with SWI Prolog CLP(X) libraries
-because these these libraries belong to a different paradigms. For this reason the mapping was not immediate but
+because these libraries belong to different paradigms. For this reason the mapping was not immediate but
 sometimes different approaches have been used to solve these issues.\newline\newline
-Following the main mapping choices divided by Library
+Following, the main mapping choices grouped by Library
 
-\subsection{Constraint Logic Programming over Finite Domains}\label{map_clpfd}
+\subsection{Constraint Logic Programming over Finite Domains}\label{subsec:map_clpfd}
 
+The \textbf{Model} class of Choco has been used to keep all information about variables and constraints.\newline
+\textbf{in/2} and \textbf{ins/2} predicates have been mapped to the method\newline\textbf{intVar(name,lower\_bound,upper\_bound)}
+which allows to store the different variables.\newline
+\begin{center}
+    \begin{table}
+        \begin{tabular}{||c c||} 
+        \hline
+        SWI Prolog & Choco Library \\ [0.5ex] 
+        \hline\hline
+        all\_distinct(Vars) & allDifferent(Vars) \\ 
+        \hline
+        sum(Vars,Op,Result) & sum(Vars,Op,Result) \\
+        \hline
+        scalar\_product(Coeffs, Vars, Op, Result) & scalar(Vars, Coeffs, Op, Result)\\
+        \hline
+        lex\_chain([List1, List2]) & lexLessEq(List1, List2) \\
+        \hline
+        tuples\_in([Tuple], Relation) & table(Tuple, Relation) \\
+        \hline
+        serialized(Starts, Durations) & diffN(Starts, Zeros, Durations, Ones) \\
+        \hline
+        element(N, Vs, V) & element(V, Vs, N) \\
+        \hline
+        global\_cardinality(Vs, Pairs) & global\_cardinality(Vs, Values, Occurrences) \\
+        \hline
+        circuit(Variables) & circuit(Variables) \\
+        \hline
+        cumulative(Tasks, Options) & cumulative(Tasks, Capacities, GlobalCapacity) \\
+        \hline
+        disjoint2(Rectangles) & diffN(XCoordinates, YCoordinates, Lengths, Heights) \\
+        \hline
+        chain(Variables, Relation) & binary relational constraint for each pair of variables \\
+        \hline
+        \end{tabular}
+        \label{table:global_mapping}
+        \caption{Global constraints mapping between CLP(FD) and Choco Library}
+    \end{table}    
+\end{center}
+Each \textbf{relational constraint} can be added to the model using \textbf{decompose().post()} applied to the constraint which
+belongs to the class \textbf{ReExpression} whereas the different arguments of these constraints are \textbf{arithmetical expressions} 
+belonging to the class \textbf{ArExpression}
+\textbf{Global constraints} have been mapped using different methods provided by the \textbf{Model} class, they
+are summarized in table \ref{table:global_mapping}
+\textbf{enumeration predicates} have been implemented using \textbf{Search.intVarSearch} which allows to customize
+the searching process.\newline
+\textbf{reification predicates} have been implemented converting relational constraints to boolean variables and
+combining them using \textbf{LogOp} logical operators.
+\textbf{reflection predicates} have been mapped using different properties of \textbf{IntVar} which
+allow to inspect different aspects of the variables such as domain, number of constraints, etc\dots
+
+\subsection{Constraint Logic Programming over Rationals and Reals}\label{subsec:map_clpqr}
+The constraint \textbf{{}} is used both for variable creation using\newline\textbf{realVar(name,lowerBound,upperBound,precision)}
+and for imposing different constraints which are encoded using continuous arothmetic and relational expressions
+(\textbf{CArExpression} and \textbf{CReExpression}) in a similar way discussed for finite domain variables.\newline
+Satisfaction and optimization problem are implemented as discussed for finite domain variables using only the default configuration
+provided by SWI Prolog because differently from Choco, SWI Prolog does not allow to customize the searching strategies.\newline
+\textbf{Mixed Integer Programming} predicates have been mapped using  some additional variables to constraint real variables to
+assume integer values.\newline
+\textbf{entailed/1} predicate has been implemented exploiting on \textbf{isSatisfied} property of the \textbf{Constraint} interface.\newline
+\textbf{dump/3} has been implemented using a \textbf{DefaultTermVisitor} which allows to replace variables in different constraints.
+
+\subsection{Constraint Logic Programming over Boolean Variables}\label{subsec:map_clpb}
+The common mapping strategy behind all clpb predicates is the following:
+\begin{itemize}
+    \item add new variables to the model
+    \item store constraint to the model
+    \item check whether the particular condition (e.g satisfiability or tautology) is true on the current model
+\end{itemize}
 
 
 

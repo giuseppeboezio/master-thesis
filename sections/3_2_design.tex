@@ -18,7 +18,7 @@ For a better explaination predicates will be divided in groups as described in s
 
 \subsubsection{Arithmetic Constraints}\label{subsubsec:arithmetic_constraints}
 
-All constraints supported by SWI Prolog are supported; constraints are the followings:\newpage
+All constraints supported by SWI Prolog are also supported in 2P-Kt; constraints are the followings:\newpage
 \begin{center}
     \begin{table}
         \begin{tabular}{||c c ||} 
@@ -92,16 +92,16 @@ The predicates are:\newline
     \item \textbf{Vars in Domain}: The variables in the list Vars are elements of Domain
 \end{itemize}
 
-It is not current supported \textit{\/} (union of domains) as expression for building a domain.
+It is not current supported union of domains as expression for building a domain.
 
 \subsubsection{Enumeration predicates}\label{subsubsec:enumeration}
 
-These predicates are used to customize the search to find a feasible assignments of all variables such that all constraints are satisfied.\newline
+These predicates are used to customize the search to find a feasible assignment of all variables such that all constraints are satisfied.\newline
 The predicates are \textbf{labeling/2 and label/1}.\newline\newline
 \textbf{labeling(Options, Vars)}\newline\newline
-Assign a value to each variable in Vars; Options is a list of options that let exhibit some control over the search process. Several categories of options exist:\newline
+Assign a value to each variable in Vars; Options is a list of options that let exhibit some control over the search process. Several categories of options exist:
 \begin{itemize}
-    \item \textbf{variable selection strategy}: it can the order in which the variable occurs (\textit{leftmost}, it is the default), the leftmost variable with smallest domain (\textit{ff}), the variables with smallest domains, the leftmost one participating in most constraints (\textit{ffc}), the leftmost variable whose lower bound is the lowest (\textit{min}) or the leftmost variable whose upper bound is the highest (\textit{max})
+    \item \textbf{variable selection strategy}: it can be the order in which the variable occurs (\textit{leftmost}, it is the default), the leftmost variable with smallest domain (\textit{ff}), the variables with smallest domains, the leftmost one participating in most constraints (\textit{ffc}), the leftmost variable whose lower bound is the lowest (\textit{min}) or the leftmost variable whose upper bound is the highest (\textit{max})
     \item \textbf{value order}: elements of the chosen variable's domain in ascending order (\textit{up}, it is the default) or domain elements in descending order (\textit{down})
     \item \textbf{branching strategy}: For each variable X, a choice is made between X = V and X \#\= V, where V is determined by the value ordering options. This option is called \textit{step}, it is the default and the only branching option supported
 \end{itemize}
@@ -113,8 +113,8 @@ The order of solutions can be influenced with:\newline
     \item max(Expr)
 \end{itemize}
 
-This generates solutions in ascending/descending order with respect to the evaluation of the arithmetic expression Expr. Labeling Vars must make Expr ground. If several such options are specified, they are interpreted from left to right.\newline
-This predicate does not support as options the following branching strategies:\newline
+This generates solutions in ascending/descending order with respect to the evaluation of the arithmetic expression Expr.\newline
+The predicate \textbf{labeling/2} does not support as options the following branching strategies:\newline
 \begin{itemize}
     \item \textit{enum}: For each variable X, a choice is made between X = V\_1, X = V\_2 etc., for all values V\_i of the domain of X. The order is determined by the value ordering options.
     \item \textit{bisect}: For each variable X, a choice is made between X \#=< M and X \#> M, where M is the midpoint of the domain of X.
@@ -144,7 +144,7 @@ Wrt global constraints provided by CLP(FD) library of SWI Prolog the following a
 \begin{itemize}
     \item the index of the predicate \textbf{circuit/1} starts from 1 and not from 0 for implementation issues
     \item the predicate \textbf{all\_different/1} has not been supported because it has the same usage of \textbf{all\_distinct} but it has a weaker propagation which cannot be simulated
-    \item predicates \textbf{automaton/3} and \textbf{automaton/8} have not been implemented because of the fact that these predicates are rarely used and tedious to use
+    \item predicates \textbf{automaton/3} and \textbf{automaton/8} have not been implemented because of the fact that these predicates are rarely and difficult to use
     \item the predicate \textbf{global\_cardinality/3} can be used but actually it throws an exception because the Option parameter cannot be supported
 \end{itemize}
 
@@ -174,7 +174,7 @@ Reflection predicates let obtain, in a well-defined way, information that is nor
 \end{itemize}
 
 \subsection{Constraint Logic Programming over Rationals and Reals}\label{subsec:clpqr}
-This library is very different from the previous one because variable definitions and constraints can be stated in the same structure. The main predicate is
+This library is very different from the previous one because variable definitions and constraints can be stated in the same predicate. The main predicate is
 \textbf{\{\}(Constraints)} which allows to add the constraints given by Constraints to the constraint store.\newline
 \textit{Constraints} can be defined using the following grammar:
 
@@ -185,8 +185,8 @@ This library is very different from the previous one because variable definition
     \label{fig:bnf_constraints}
 \end{figure}
 
-All constraints are supported except for \textit{<Expression> =\= <Expression>} (not equal).
-This libraries contain also the following predicates:
+All constraints are supported except for \textit{<Expression> =\\= <Expression>} (not equal).
+This libraries contains also the following predicates:
 \begin{itemize}
     \item \textbf{satisfy(Vars)}: Provides for each variable in Vars a feasible assignment
     \item \textbf{entailed(Constraint)}: Succeeds if Constraint is necessarily true within the current constraint store. This means that adding the negation of the constraint to the store results in failure
