@@ -49,5 +49,8 @@
 \contentsline {subsection}{\numberline {4.1.1}Labelled Variables}{33}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Labelled Terms}{35}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Implementation}{35}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Labels}{36}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Unificator}{36}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Solver}{36}{subsection.4.2.3}%
 \contentsline {chapter}{\numberline {5}CLP as Labeled Prolog}{37}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Conclusions and future work}{39}{chapter.6}%

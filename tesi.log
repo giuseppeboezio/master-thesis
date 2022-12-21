@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.11)  21 DEC 2022 10:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.11)  21 DEC 2022 10:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1509,7 +1509,7 @@ Overfull \hbox (113.7061pt too wide) in paragraph at lines 67--75
 LaTeX Warning: Citation 'Gallier1985LogicFC' on page 6 undefined on input line 88.
 
 [6]
-<images/2p_kt.jpg, id=175, 551.81157pt x 272.51813pt>
+<images/2p_kt.jpg, id=179, 551.81157pt x 272.51813pt>
 File: images/2p_kt.jpg Graphic file (type jpg)
 <use images/2p_kt.jpg>
 Package pdftex.def Info: images/2p_kt.jpg  used on input line 95.
@@ -1618,7 +1618,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--144
  []
 
 [16] [17]
-<images/bnf_constraints.jpg, id=239, 347.79938pt x 447.92343pt>
+<images/bnf_constraints.jpg, id=243, 347.79938pt x 447.92343pt>
 File: images/bnf_constraints.jpg Graphic file (type jpg)
 <use images/bnf_constraints.jpg>
 Package pdftex.def Info: images/bnf_constraints.jpg  used on input line 183.
@@ -1704,7 +1704,7 @@ Overfull \hbox (97.7051pt too wide) in paragraph at lines 26--29
  []
 
 [25] [26]
-<images/sequence_diagram.jpg, id=280, 931.48pt x 630.355pt>
+<images/sequence_diagram.jpg, id=284, 931.48pt x 630.355pt>
 File: images/sequence_diagram.jpg Graphic file (type jpg)
 <use images/sequence_diagram.jpg>
 Package pdftex.def Info: images/sequence_diagram.jpg  used on input line 76.
@@ -1779,11 +1779,11 @@ Overfull \hbox (218.15077pt too wide) detected at line 48
 [][][]\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t; l\OT1/cmr/m/n/10.95 ) = []
  []
 
-) (./sections/4_3_implementation.tex)) (./sections/5_0_clp_labeled_prolog.tex [35] [36
-
-]
+) (./sections/4_3_implementation.tex [35])) (./sections/5_0_clp_labeled_prolog.tex [36]
 Chapter 5.
-(./sections/5_1_clp_labeled_prolog.tex)) (./sections/6_0_conclusions.tex [37] [38
+(./sections/5_1_clp_labeled_prolog.tex)) (./sections/6_0_conclusions.tex [37
+
+] [38
 
 ]
 Chapter 6.
@@ -1834,18 +1834,18 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37903 strings out of 474968
- 683694 string characters out of 5780080
- 1548340 words of memory out of 5000000
- 58226 multiletter control sequences out of 15000+600000
+ 37912 strings out of 474968
+ 683809 string characters out of 5780080
+ 1548426 words of memory out of 5000000
+ 58232 multiletter control sequences out of 15000+600000
  508975 words of font info for 232 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  91i,9n,125p,2351b,2374s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on tesi.pdf (52 pages, 668788 bytes).
+Output written on tesi.pdf (52 pages, 673045 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 128 named destinations out of 1000 (max. 500000)
- 65856 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 618 PDF objects out of 1000 (max. 8388607)
+ 514 compressed objects within 6 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 65880 words of extra memory for PDF output out of 74296 (max. 10000000)
 
