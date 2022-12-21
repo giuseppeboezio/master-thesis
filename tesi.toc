@@ -44,10 +44,10 @@
 \contentsline {subsubsection}{\numberline {3.4.2.4}Data provided by the problem}{29}{subsubsection.3.4.2.4}%
 \contentsline {subsubsection}{\numberline {3.4.2.5}Constraints}{30}{subsubsection.3.4.2.5}%
 \contentsline {subsubsection}{\numberline {3.4.2.6}Performance}{31}{subsubsection.3.4.2.6}%
-\contentsline {chapter}{\numberline {4}Labeled Prolog}{33}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Model}{34}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Labeled Variables}{34}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Labeled Terms}{34}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Implementation}{34}{section.4.2}%
-\contentsline {chapter}{\numberline {5}CLP as Labeled Prolog}{35}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions and future work}{37}{chapter.6}%
+\contentsline {chapter}{\numberline {4}Labelled Prolog}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Model}{33}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Labelled Variables}{33}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Labelled Terms}{35}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Implementation}{35}{section.4.2}%
+\contentsline {chapter}{\numberline {5}CLP as Labeled Prolog}{37}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusions and future work}{39}{chapter.6}%

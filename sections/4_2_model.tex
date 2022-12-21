@@ -1,5 +1,68 @@
 \section{Model}\label{sec:model}
 
-\subsection{Labeled Variables}\label{subsec:labeled_variables}
+\subsection{Labelled Variables}\label{subsec:labelled_variables}
 
-\subsection{Labeled Terms}\label{subsec:labeled_terms}
+Let \textit{C} be the set of constants, with c1, c2 $\in$ \textit{C} being two generic constants. Let \textit{V} be the set of
+variables, with v1, v2 $\in$ \textit{V} being two generic variables. Let \textit{F} be the set of function symbols, with
+f1, f2 $\in$ \textit{F} being two generic function symbols; each f $\in$ F is associated to an arity ar(f) > 0,
+stating the number of function arguments. Let \textit{T} be the set of terms, with t1, t2 $\in$ \textit{T} being two
+generic terms. Terms can be either simple, a constant (e.g., c1) and a variable (e.g., v2) are both
+simple terms, or compound, a functor of arity n applied to n terms (e.g., f1(c2, v1)) is a compound term. A term is said ground if it does not contain variables
+Let \textit{H} denote the set of ground terms, also known as the Herbrand universe. A model for Labelled Variables in Logic Programming (LVLP) is defined as a triple ⟨\textit{B}, $f_L$, $f_C$⟩,
+where
+\begin{itemize}
+    \item \textit{B} = \{$\beta_1, . . . , \beta_n$\} is the set of basic labels, the basic entities of the domain of labels
+    \item \textit{L} $\subseteq \mathcal{P}(\textit{B}) $ is the set of labels, where each label \textit{l} $\in$ \textit{L} is a subset of \textit{B}
+    \item $f_L : \textit{L} \times \textit{L} \rightarrow \textit{L}$ is the (label-)combining function computing a new label from two given ones
+    \item $f_C : \textit{H} \times \textit{L} \rightarrow {true, false}$ is the compatibility function, assessing the compatibility between
+    a ground term and a label when interpreted in the domain of labels
+    \item a labelled variable is a pair ⟨v, l⟩ associating label l $\in$ L to variable v $\in$ V
+    \item a \textit{labelling} is a set of \textit{labelled variables}
+\end{itemize}
+
+An LVLP program is a collection of LVLP rules of the form
+\[ Head :- Labelling, Body. \]
+to be read as “Head if Body given Labelling”. There, Head is an atomic formula, Labelling is the
+list of labelled variables in the clause, and Body is a list of atomic formulas.
+An atomic formula has the form $p(t_1,...,t_n)$ where p is a
+predicate symbol and $t_i$ are terms. Atom $p(t_1,...,t_n)$ is said ground if $t_1,..., t_n$ are ground.\newline\newline
+The \textit{unification} between terms happens as described in the following table:
+
+
+The only case to be added to the standard unification table is represented by labelled variables.
+There, given two generic LVLP terms, the unification result is represented by the extended tuple
+\[ (true/false, \theta, l) \]
+where true/false represents the existence of an answer, θ is the most general unifier \(mgu\), and l is
+the new label associated to the unified variables defined by the (label-)combining function $f_L$
+It is important to define a concept which allows to check whether a label assigned to a variable is compatible with its substitution or not.
+To do this, the following \textit{compatibility function} $f_C$ is defined:
+\[ f_C : H \times L \rightarrow \{true, false\}\]
+In particular, given a a ground term t $\in$ H and label l $\in$ L:
+\begin{equation}
+    f_C(t,l) = 
+    \begin{cases*}
+        true & if there exists at least one element of the domain of
+        labels which the interpretations of t and l both refer to \\
+        false & otherwise
+    \end{cases*}
+\end{equation}
+
+\subsection{Labelled Terms}\label{subsec:labelled_terms}
+Labelled Terms can be seen as a generalization of the previous approach where it is possible to apply a label not only to a variable
+but to each kind of term. The main idea of this approach consists of using two functions:
+\begin{itemize}
+    \item \textbf{shouldUnify(term1, labels1, term2, labels2)}: this function is used to check whether, according to \textit{labels1} and \textit{labels2},
+    it is possible to unify \textit{term1} and \textit{term2}. This function is very similar to $f_L$ used in
+    the unification process to allow the substitution of a variable when $f_L(labels1,labels2) \neq \emptyset$
+    \item \textbf{merge(term1, labels1, term2, labels2)}: this function is used to generate new labels after unifying terms \textit{term1} and \textit{term2}.
+    It has the same meaning of $f_L(labels1,labels2)$ but it is applied to every kind of term
+\end{itemize}
+Unification between terms happens as described by the following table:
+
+A specific issue of this generalization of labels to all kind of terms consists of considering the compatibility between the labels of a predicate and
+the labels of its arguments.\newline
+This is reasonable because a predicate expresses a relationship among objects; therefore the information (labels) associated to these objects
+must be meaningful with respect to the information associated to their relation.\newline
+For this reason the function \textbf{stillValid(struct)} has been added to the resolution process to check the compatibility
+of the aforementioned labels.
+
