@@ -2383,7 +2383,8 @@
     <bcf:citekey order="29" intorder="1">JAFFAR1994503</bcf:citekey>
     <bcf:citekey order="30" intorder="1">10.1145/800223.806776</bcf:citekey>
     <bcf:citekey order="31" intorder="1">NG1992150</bcf:citekey>
-    <bcf:citekey order="32" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">10.1007/978-3-540-74970-7_38</bcf:citekey>
+    <bcf:citekey order="33" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
