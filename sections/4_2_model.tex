@@ -28,6 +28,41 @@ An atomic formula has the form $p(t_1,...,t_n)$ where p is a
 predicate symbol and $t_i$ are terms. Atom $p(t_1,...,t_n)$ is said ground if $t_1,..., t_n$ are ground.\newline\newline
 The \textit{unification} between terms happens as described in the following table:
 
+%%%%
+\begin{landscape}
+%
+\begin{table}[p]
+%
+\begin{tabular}{c|c|c|c|c|}
+                            & \emph{constant} $c_2$			& \emph{variable} $v_2$		&	\emph{labelled variable} $\labelass{v_{2}}{\ell_2}$	&	\emph{compound term} $s_2$	\\
+\hline\hline
+\emph{constant} 					\tz	if $c_1=c_2$ 			\tz	$\true,\{v_2/c_1\}$	\tz	if $f_C({c_1},{\ell_2})=\true$ 		\tz  $\false$	\lz
+$c_1$						\tz	then $\true$ 			\tz						\tz	then $\true,\{v_2/c_1\}$, $\ell_2$	\tz  \lz
+                            \tz	else $\false$			\tz						\tz	else $\false$						\tz  \\
+\hline
+\emph{variable}					\tz	$\true,\{v_1/c_2\}$		\tz	$\true,\{v_1/v_2\}$	\tz	$\true,\{v_1/v_2\},\ell_2$		\tz	if $v_1$ does not occur in $s_2$	\lz
+$v_1$						\tz							\tz						\tz										\tz	then $\true,\{v_1/s_2\}$	\lz
+                            \tz							\tz						\tz										\tz	else $\false$	\\
+\hline
+\emph{labelled}			\tz	if $f_C({c_2},{\ell_1})=\true$ 	\tz	$\true,\{v_1/v_2\},\ell_1$	\tz	if $f_L(\ell_1,\ell_2)\neq\emptyset$	\tz	if $v_1$ does not occur in $s_2$, and\lz
+\emph{variable} 	\tz	then $\true,\{v_1/c_2\}$, $\ell_1$		\tz							\tz	then $\true, \{ v_1 / v_2 \},$ $ f_L(\ell_1,\ell_2)$	\tz	$f_L(\ell_1,\ell'_1,...,\ell'_n)\neq\emptyset$ \lz
+$\labelass{v_{1}}{\ell_1}$ 	\tz	else $\false$ 					\tz							\tz	else $\false$   \tz	where $\ell'_1,...\ell'_n$ are the labels in $s_2$	\lz
+                            \tz 								\tz							\tz			 		\tz	then $\true,\{v_1/s_2\}$, $f_L(\ell_1,\ell'_1,...,\ell'_n)$	\lz
+                            \tz 								\tz							\tz			 		\tz	else $\false$	\\
+\hline
+\emph{compound} 		\tz	$\false$ 	\tz	if $v_2$ does not occur in $s_1$	\tz	if $v_2$ does not occur in $s_1$, and				\tz	if $s_1, s_2$ have same functor / arity, and\lz
+\emph{term}		\tz			\tz	then $\true,\{v_2/s_1\}$	\tz 	$f_L(\ell_2,\ell'_1,...,,\ell'_n)\neq\emptyset$						\tz their arguments (recursively) unify\lz
+$s_1$						\tz			\tz	else $\false$ 				\tz where $\ell'_1,...\ell'_n$ are the labels in $s_1$			\tz	then $\true$ \lz
+                            \tz			\tz								\tz then $\true,\{v_2/s_1\}, f_L(\ell_2,\ell'_1,...,,\ell'_n)$,	\tz	else $\false$\lz
+                            \tz			\tz								\tz else $\false$	\tz\\
+    \hline\hline
+\end{tabular}
+%
+\caption{Unification rules in LVLP, adopting standard LP unification rules and representation}
+\end{table}
+%
+\end{landscape}
+%%%%
 
 The only case to be added to the standard unification table is represented by labelled variables.
 There, given two generic LVLP terms, the unification result is represented by the extended tuple

@@ -18,9 +18,16 @@ For example the struct \textbf{f(a,B)} having \textbf{a} associated with labels 
 
 \subsection{Unificator}\label{subsec:unificator}
 \textbf{Unificator} interface has been extended to support the functions described in \ref{subsec:labelled_terms}.
-\textbf{AbstractUnificator} class has been modified in order to allow the customization of the final substitution that in the current scenario
-has been implemented to keep all labels associated to the different terms compared during the generation of the most general unifier (m.g.u.).\newline
+\textbf{AbstractUnificator} class has been modified in order to allow the customization of the final substitution. In the current scenario
+the substitution contains also all labels associated to terms that are compared during the generation of the most general unifier (m.g.u.).\newline
 The class \textbf{AbstractLabelledUnificator} has been created to allow the user to define own callback functions (shouldUnify and merge) in order
 to deal with the specific scenario which requires specific kinds of labels and unification rules.
 
 \subsection{Solver}\label{subsec:solver}
+\textbf{LabelledPrologSolver} is a paticular Solver and deals with labels using a Unificator which implements the
+interface \textbf{LabelledUnificator}. The consistency among the labels of a predicate and the labels of its arguments is
+checked using \textbf{hijackStateTransition} which is a method used to intercept the transition between states in the
+Prolog Finite State Machine (FSM). In this case each time a Rule or a Primitive has been executed and the next state is
+the Goal Selection, \textbf{stillValid} method is called to check whether labels are still valid or not and in the latter case
+the next state is the Backtracking state whose main purpose is to choose a different rules or primitive to execute.\newline
+\textbf{stillValid} is a callback which is defined by the user according to the specific scenario.
