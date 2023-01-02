@@ -8,9 +8,10 @@ Four different libraries have been realized:
     \item \textbf{clpqr} for rational and real variables
     \item \textbf{clpb} for boolean variables
 \end{itemize}
-\textbf{clpqr} contains basically the predicates of \textbf{clpq} and \textbf{clpr} because there
+\textbf{clpqr} contains basically the predicates of \textbf{clpq} and \textbf{clpr} of SWI Prolog because there
 is any distinction between rational and reals in 2P-Kt.\newline
-
+Libraries have been developed in this way to keep separated predicates which affect variables with different domains. This is useful because
+each variabile type has own way to deal with constraints and searching for feasible solutions.
 Libraries will be described in the following sections highlighting common and/or different aspects with respect to the SWI Prolog counterpart.
 
 \subsection{Constraint Logic Programming over Finite Domains}\label{subsec:clpfd}

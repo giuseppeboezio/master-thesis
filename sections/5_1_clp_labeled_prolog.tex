@@ -1,0 +1,34 @@
+\textit{Labelled Prolog} is a monotonic extension of Prolog which allows to deal with specific domains
+without the need to use specific languages or libraries to deal with them.\newline
+There are different variants and extensions of logic programming which include:
+\begin{itemize}
+    \item abductive logic programming \cite{10.1093/logcom/2.6.719}
+    \item metalogic programming  \cite{10.5555/94469}
+    \item constraint logic programming \cite{JAFFAR1994503}
+    \item concurrent logic programming \cite{10.1145/800223.806776}
+    \item probabilistic logic programming \cite{NG1992150}
+\end{itemize}
+With \textbf{Labelled Prolog} discussed in the previous chapter, all these extensions and
+variants could be framed in a single environment allowing to reduce the amount of languages to a single one (Labelled Prolog) and
+focusing more on how to adapt labels and unification mechanisms to the specific domain needs.\newline\newline
+In the current chapter is shown how to adapt CLP to the labels mechanism using the following example.\newline
+Let's assume to have the following \textit{Knowledge Base}:\newline
+\begin{lstlisting}[label=program1, frame=none, mathescape, language=tuProlog, caption={}]
+    problem(X<@1,@100>,Y<@1,@100>)<@>> :- [X,Y] ins 1..100, X #> Y.
+    problem(X<@1,@100>,Y<@1,@100>)<@<> :- [X,Y] ins 1..100, X #< Y.
+    problem(X<@1,@100>,Y<@1,@100>)<@>=> :- [X,Y] ins 1..100, X #>= Y.
+\end{lstlisting}
+A possible \textit{Goal} could be:
+\begin{lstlisting}[label=program1, frame=none, mathescape, language=tuProlog, caption={}]
+    ?-problem(X<@2,@8>,Y<@7,@12>)<@>>
+\end{lstlisting}
+With the current example the idea would be to state that we want to solve a problem whose variables have a domain
+which is described by their labels and whose constraints are described by the labels of predicate \textit{problem/2}.\newline
+In this way we are able to express a CLP problem in a much more expressive way wrt a way which is strictly related to a specific
+language or library. The unification process will check, according to the constraint described as label, which is the rule
+to execute. Domain of variables are combined using intersection and in this case the \textit{stillValid} callback
+checks, in addition to the equality of the constraint, whether assignments of variables are between the first and the second label
+of the variables (they correspond to the lower and upper bounds).\newline
+In this example the body of the rules contains a specific domain range because with the current implementation it is not possible
+to use labels as arguments of a predicate but only to attach them to terms. Therefore, a default domain range is
+provided for both variables.

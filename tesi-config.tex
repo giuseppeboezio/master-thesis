@@ -216,3 +216,25 @@
 \newcommand{\tz}{&\scriptsize}
 \newcommand{\lz}{\\[-2mm]}
 
+\lstloadlanguages{Prolog,Java}
+\lstdefinelanguage{tuProlog}[]{Prolog}{
+	alsoletter={<-},
+	emph={
+		returns,<-,java_object,java_class,java_array_set,
+		class,new_object,load_convention
+	},
+	emphstyle=\color{RoyalBlue}
+}
+\lstset{language=Prolog,
+	basicstyle=\fontsize{7}{8}\selectfont\ttfamily,
+	backgroundcolor=\color{WhiteSmoke},
+	frame=single,
+	tabsize=2,
+	sensitive=true,
+	showspaces=false, showtabs=false, showstringspaces=false,
+	commentstyle=\color{blue},
+	stringstyle=\color{black},
+}
+
+\definecolor{WhiteSmoke}{rgb}{0.960784,0.960784,0.960784}
+

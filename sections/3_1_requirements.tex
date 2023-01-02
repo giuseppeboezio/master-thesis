@@ -2,6 +2,9 @@
 
 As described in section \ref{subsec:2p_kt}, 2P-Kt is an exensible framework with different mechanisms
 which could be used to add to the standard Prolog other features; in this case we deal with Constraint Logic Programing (CLP).\newline
+There are existing libraries for Prolog interpreters which deal with Constraint Logic Programming. SWI Prolog uses different libraries
+called CLP(X) (where is X is the domain of the variables) which are very popular and used in the Prolog community. For this reason, different libraries
+have been developed which share the same predicates having the same functor/arity in such a way that for a new 2P-Kt user can be very easy and familiar to use them.\newline
 The main purpose of the following project is to implement CLP libraries in 2P-Kt having the following requirements:
 \begin{itemize}
     \item the interface of the predicates exposed by the libraries must be as close as possible to the one used by SWI Prolog for CLP
