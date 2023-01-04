@@ -28,7 +28,7 @@ All constraints supported by SWI Prolog are also supported in 2P-Kt; constraints
         \hline\hline
         Expr1 \#= Expr2	& Expr1 equals Expr2 \\ 
         \hline
-        Expr1 \#\= Expr2 & Expr1 is not equal to Expr2 \\
+        Expr1 \#$\backslash$= Expr2 & Expr1 is not equal to Expr2 \\
         \hline
         Expr1 \#>= Expr2 & Expr1 is greater than or equal to Expr2\\
         \hline
@@ -62,7 +62,7 @@ All constraints supported by SWI Prolog are also supported in 2P-Kt; constraints
         \hline
         Expr - Expr	& Subtraction \\
         \hline
-        Expr \^ Expr& Exponentiation \\
+        Expr \^{} Expr& Exponentiation \\
         \hline
         min(Expr,Expr) & Minimum of two expressions \\
         \hline
@@ -104,7 +104,7 @@ Assign a value to each variable in Vars; Options is a list of options that let e
 \begin{itemize}
     \item \textbf{variable selection strategy}: it can be the order in which the variable occurs (\textit{leftmost}, it is the default), the leftmost variable with smallest domain (\textit{ff}), the variables with smallest domains, the leftmost one participating in most constraints (\textit{ffc}), the leftmost variable whose lower bound is the lowest (\textit{min}) or the leftmost variable whose upper bound is the highest (\textit{max})
     \item \textbf{value order}: elements of the chosen variable's domain in ascending order (\textit{up}, it is the default) or domain elements in descending order (\textit{down})
-    \item \textbf{branching strategy}: For each variable X, a choice is made between X = V and X \#\= V, where V is determined by the value ordering options. This option is called \textit{step}, it is the default and the only branching option supported
+    \item \textbf{branching strategy}: For each variable X, a choice is made between X = V and X \#$\backslash$= V, where V is determined by the value ordering options. This option is called \textit{step}, it is the default and the only branching option supported
 \end{itemize}
 
 At most one option of each category can be specified, and an option must not occur repeatedly.\newline
@@ -115,7 +115,7 @@ The order of solutions can be influenced with:\newline
 \end{itemize}
 
 This generates solutions in ascending/descending order with respect to the evaluation of the arithmetic expression Expr.\newline
-The predicate \textbf{labeling/2} does not support as options the following branching strategies:\newline
+The predicate \textbf{labeling/2} does not support as options the following branching strategies:
 \begin{itemize}
     \item \textit{enum}: For each variable X, a choice is made between X = V\_1, X = V\_2 etc., for all values V\_i of the domain of X. The order is determined by the value ordering options.
     \item \textit{bisect}: For each variable X, a choice is made between X \#=< M and X \#> M, where M is the midpoint of the domain of X.
@@ -153,13 +153,13 @@ Wrt global constraints provided by CLP(FD) library of SWI Prolog the following a
 All relational constraints discussed in \ref{subsubsec:arithmetic_constraints} can be reified.
 This means that their truth value is itself turned into a clpfd variable, so that it is possible to reason about whether a constraint holds or not. These predicates are reifiable themselves.
 \begin{itemize}
-    \item \textbf{\#\ Q}: Q does not hold
+    \item \textbf{\#$\backslash$Q}: Q does not hold
     \item \textbf{P \#<==> Q}: P and Q are equivalent
     \item \textbf{P \#==> Q}: P implies Q
     \item \textbf{P \#<== Q}: Q implies P
-    \item \textbf{P \#/\ Q}: P and Q hold
-    \item \textbf{P \#\/ Q}: P or Q hold
-    \item \textbf{P \#\ Q}: Either P holds or Q holds, but not both
+    \item \textbf{P \#$\land$ Q}: P and Q hold
+    \item \textbf{P \#$\lor$ Q}: P or Q hold
+    \item \textbf{P \#$\backslash$ Q}: Either P holds or Q holds, but not both
     \item \textbf{zcompare(Order, A, B)}: reify an arithmetic comparison of two integers
 \end{itemize}
 
@@ -228,7 +228,7 @@ All predicates of this library are based on the concept of \textit{boolean expre
         \hline
         Expr =:= Expr & equality \\
         \hline
-        Expr =\= Expr & disequality (same as \#) \\
+        Expr =$\backslash$= Expr & disequality (same as \#) \\
         \hline
         Expr =< Expr & less or equal (implication) \\
         \hline

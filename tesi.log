@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.11)  2 JAN 2023 22:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.11)  4 JAN 2023 21:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1379,24 +1379,43 @@ File: ctex-zhmap-windows.tex 2022/07/14 v2.5.10 Windows font map loader for pdfT
 
 ]) (./pages/colophon.tex [2
 
-]) (./pages/abstract.tex) (./pages/indici.tex [3
+]) (./pages/abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
+
+ []
 
 
-] [4
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
-] (./tesi.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
+
+ []
+
+[3
+
+
+]) (./pages/indici.tex [4] (./tesi.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [5
+
 
 ])
 \tf@toc=\write7
@@ -1515,7 +1534,7 @@ Overfull \hbox (113.7061pt too wide) in paragraph at lines 67--75
 LaTeX Warning: Citation 'Gallier1985LogicFC' on page 6 undefined on input line 88.
 
 [6]
-<images/2p_kt.jpg, id=192, 551.81157pt x 272.51813pt>
+<images/2p_kt.jpg, id=185, 551.81157pt x 272.51813pt>
 File: images/2p_kt.jpg Graphic file (type jpg)
 <use images/2p_kt.jpg>
 Package pdftex.def Info: images/2p_kt.jpg  used on input line 95.
@@ -1603,11 +1622,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
-
- []
-
 [14]
 Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
@@ -1619,7 +1633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--145
  []
 
 [16] [17]
-<images/bnf_constraints.jpg, id=256, 347.79938pt x 447.92343pt>
+<images/bnf_constraints.jpg, id=249, 347.79938pt x 447.92343pt>
 File: images/bnf_constraints.jpg Graphic file (type jpg)
 <use images/bnf_constraints.jpg>
 Package pdftex.def Info: images/bnf_constraints.jpg  used on input line 184.
@@ -1705,7 +1719,7 @@ Overfull \hbox (97.7051pt too wide) in paragraph at lines 26--29
  []
 
 [25] [26]
-<images/sequence_diagram.jpg, id=297, 931.48pt x 630.355pt>
+<images/sequence_diagram.jpg, id=290, 931.48pt x 630.355pt>
 File: images/sequence_diagram.jpg Graphic file (type jpg)
 <use images/sequence_diagram.jpg>
 Package pdftex.def Info: images/sequence_diagram.jpg  used on input line 76.
@@ -1760,9 +1774,6 @@ LaTeX Warning: Citation '10.3233/FI-2018-1695' on page 33 undefined on input lin
 
 LaTeX Warning: Citation '10.3233/FI-2018-1695' on page 33 undefined on input line 9.
 
-
-LaTeX Warning: Reference `sec:implementation' on page 33 undefined on input line 9.
-
 )
 Underfull \hbox (badness 10000) in paragraph at lines 1--14
 
@@ -1783,16 +1794,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [35]
-Overfull \hbox (218.15077pt too wide) detected at line 83
-[][][]\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t; l\OT1/cmr/m/n/10.95 ) = []
- []
-
-[36
+ [35] [36
 
 
 ]
-Overfull \hbox (422.06265pt too wide) in paragraph at lines 102--135
+Overfull \hbox (422.06265pt too wide) in paragraph at lines 100--133
 [][] 
  []
 
@@ -1886,7 +1892,12 @@ LaTeX Warning: Empty bibliography on input line 14.
 
 ) 
 AED: lastpage setting LastPage
-(./tesi.aux)
+(./tesi.aux
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
 
 LaTeX Warning: There were undefined references.
 
@@ -1903,18 +1914,18 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38457 strings out of 474968
- 689575 string characters out of 5780080
- 1585570 words of memory out of 5000000
- 58713 multiletter control sequences out of 15000+600000
- 513846 words of font info for 260 fonts, out of 8000000 for 9000
+ 38455 strings out of 474968
+ 689532 string characters out of 5780080
+ 1585515 words of memory out of 5000000
+ 58711 multiletter control sequences out of 15000+600000
+ 513965 words of font info for 261 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 91i,11n,125p,2351b,2374s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on tesi.pdf (56 pages, 784459 bytes).
+ 91i,23n,125p,2351b,2374s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on tesi.pdf (56 pages, 793306 bytes).
 PDF statistics:
- 687 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
- 144 named destinations out of 1000 (max. 500000)
- 80736 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 560 compressed objects within 6 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 80728 words of extra memory for PDF output out of 89155 (max. 10000000)
 

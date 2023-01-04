@@ -73,14 +73,12 @@ It is important to define a concept which allows to check whether a label assign
 To do this, the following \textit{compatibility function} $f_C$ is defined:
 \[ f_C : H \times L \rightarrow \{true, false\}\]
 In particular, given a a ground term t $\in$ H and label l $\in$ L:
-\begin{equation}
-    f_C(t,l) = 
-    \begin{cases*}
-        true & if there exists at least one element of the domain of
-        labels which the interpretations of t and l both refer to \\
-        false & otherwise
-    \end{cases*}
-\end{equation}
+\begin{equation*}\begin{split}
+	f_{C}(t,\ell) = \begin{cases}
+					\true & \parbox[t]{8.4cm}{if there exists at least one element of the domain of labels which the interpretations of \textit{t} and $\ell$ both refer to} \vspace{0.2cm}\\
+					\false &\parbox[t]{8cm}{otherwise}
+			       \end{cases}
+\end{split}\end{equation*}
 
 \subsection{Labelled Terms}\label{subsec:labelled_terms}
 Labelled Terms can be seen as a generalization of the previous approach where it is possible to apply a label not only to a variable
