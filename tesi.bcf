@@ -2352,39 +2352,41 @@
     <bcf:datasource type="file" datatype="bibtex">bibliografia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">10.1145/155360.155362</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">coelho1986automated</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">merritt2012building</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">gelfond2002logic</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">pinna2015resolving</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">lally2011natural</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Clocksin1987ProgrammingIP</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Gallier1985LogicFC</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">CIATTO2021100817</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">10.5555/2843512</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">JAFFAR1994503</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">SWI-Prolog</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Triska12</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Triska2016</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Triska2018</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">10.1007/978-3-030-75775-5_27</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">gamma1994design</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">Prudhomme2022</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">ortools</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">Kuchcinski2013JaCoPJ</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">inbook</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">10.5555/1695886</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">10.1007/3-540-44631-1_7</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">10.1007/3-540-44631-1_7</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">10.3233/FI-2018-1695</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">10.3233/FI-2018-1695</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">10.1093/logcom/2.6.719</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">10.5555/94469</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">JAFFAR1994503</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">10.1145/800223.806776</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">NG1992150</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">10.1007/978-3-540-74970-7_38</bcf:citekey>
-    <bcf:citekey order="33" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">TOWELL1994119</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">https://doi.org/10.48550/arxiv.2209.12618</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">10.1145/155360.155362</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">coelho1986automated</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">merritt2012building</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">gelfond2002logic</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">pinna2015resolving</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">lally2011natural</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Clocksin1987ProgrammingIP</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Gallier1985LogicFC</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">CIATTO2021100817</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">10.5555/2843512</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">JAFFAR1994503</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">SWI-Prolog</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Triska12</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Triska2016</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Triska2018</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">10.1007/978-3-030-75775-5_27</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">gamma1994design</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Prudhomme2022</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">ortools</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Kuchcinski2013JaCoPJ</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">inbook</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">10.5555/1695886</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">10.1007/3-540-44631-1_7</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">10.1007/3-540-44631-1_7</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">10.3233/FI-2018-1695</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">10.3233/FI-2018-1695</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">10.1093/logcom/2.6.719</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">10.5555/94469</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">JAFFAR1994503</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">10.1145/800223.806776</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">NG1992150</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">10.1007/978-3-540-74970-7_38</bcf:citekey>
+    <bcf:citekey order="35" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
