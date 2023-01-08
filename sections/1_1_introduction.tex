@@ -1,25 +1,22 @@
 Nowadays there are a lot of hybrid systems which exploit on different paradigms to deal with complex A.I. problems.
 An example could be represented by systems which use both symbolic and sub-symbolic approaches. Different solutions have been proposed during
-years; for example in \cite{TOWELL1994119} it is described how to reformulate rules in such a way that they can be directly used in an
+years; for example \cite{TOWELL1994119} describes how to reformulate rules in such a way that they can be directly used in an
 artificial neural network or in \cite{https://doi.org/10.48550/arxiv.2209.12618} it is described how to use together neural networks and formal logic to be able to rely on
 strenghts of both approaches in different fields such as healthcare, image processing, business management, information retrieval and many other fields.\newline\newline
 2P-Kt is an extensible ecosystem written in Kotlin which can be easily used by other applications to perform tasks using logic programming with Prolog programming language.
 Logic programming has developed during years different variations and extensions according to the needs of a specific domain. One flavor is constraint logic programming (CLP) which
 consists of applying techniques to solve combinatorial problems using an approach based on logic programming instead of using
-other kind of techniques based on other paradigms. These techniques are together called Constraint Programming.
+other kinds of techniques based on other paradigms. These techniques are together called Constraint Programming.\newline\newline
 The first contribution of this thesis is to endow 2P-Kt ecosystem with a set of libraries of CLP which allow users to be able to use this interpreter to solve specific
-problems related to combinatorial domain. To do this the Prolog predicates provided by this new group of libraries have been realized as close as
-possible to existing CLP libraries to make easier people already familiar with CLP to switch to these libraries without spending time to learn new
-predicates and their usages. Libraries have been implemented adapting an existing CP library called Choco with some 2P-Kt mechanisms which allow
-to mask the underneath CP implementation providing common predicates supported by a very famous and used CLP library of SWI Prolog interpreter called
+problems related to the combinatorial domain. The Prolog predicates provided by the new group of libraries implemented in this work have been realized as close as
+possible to existing CLP libraries to facilitate ones already familiar with CLP to switch to these libraries without spending time to learn new
+predicates and their usages. Most importantly, this enables interoperability.\newline
+Libraries have been implemented adapting an existing CP library called Choco with some 2P-Kt mechanisms which allow
+for masking of the underneath CP implementation providing common predicates supported by a very famous and used CLP library of SWI Prolog interpreter called
 CLP(X).\newline\newline
-A real case study has been developed to show how these libraries could be used by other systems to integrate different kind of functionalities. In the current case study the library concerning
+A real case study has been developed to show how these libraries could be used by other systems to integrate different kinds of functionalities. In the current case study, the library concerning
 integer variables (CLP(FD)) has been used to model constraints among professors' lessons in an italian high school. The library was very useful because it was possible to integrate
-Constraint Logic Programming in a Multi-agent context concering different kind of languages and approaches allowing the realization of a complex hybrid system as mentioned earlier.\newline\newline
-This particular extension of the 2P-Kt ecosystem has allowed to reason on how it would be unfeasible to extend the system for every kind of
-specific application domain and needs, therefore, exploiting on the concept of Labelled Variables, a new framework has been
-developed which extends the label concepts to all Prolog terms. This approach allows to reduce an huge amount of new Prolog variations and extensions
-focusing on how to adapt specif domain issues to the label concept.\newline\newline
-A possible approach to CLP with labels has been proposed to show how the labels could be effectively used to support different aspects of
-constraint programming with labels provided by this new framework.
+Constraint Logic Programming in a Multi-agent context concering different kinds of languages and approaches allowing the realization of a complex hybrid system as mentioned earlier.\newline\newline
+Therefore, exploiting the concept of Labelled Variables, a new framework has been developed which extends the label concepts to all Prolog terms designing a computational model for Labelled Prolog. This approach makes it possible to extend Prolog with many domain-specific applications (including the CLP) without designing ad-hoc-specific libraries.\newline
+A possible mapping of CLP in the Labelled Prolog framework has been proposed to show how the labels could be effectively used to support different aspects of CLP.
 
